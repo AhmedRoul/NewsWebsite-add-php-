@@ -1,0 +1,301 @@
+
+<html>
+<head>
+<title>register</title>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript">
+function a(){
+	var v=true;
+const form=document.getElementById('form1');
+const username=document.getElementById('username1');
+const email=document.getElementById('email');
+const password=document.getElementById('password');
+const password2=document.getElementById('password2');
+checkInputs();
+function checkInputs(){
+const usernameValue=username.value.trim();
+const emailValue=email.value.trim();
+const passwordValue=password.value.trim();
+const passwordValue2=password2.value.trim();
+if (usernameValue==='') {
+setErrorfor(username," Username cannot be blank ");
+}
+else{
+setsuccessfor(username);
+}
+/////
+if (emailValue==='') {
+setErrorfor(email," E mail cannot be blank ");
+}
+
+else if(emailValue.indexOf("@")==-1||emailValue.indexOf(".")==-1){
+setErrorfor(email," E mail not valid");
+
+}
+else{
+setsuccessfor(email);
+}
+//////
+
+if (passwordValue==='') {
+setErrorfor(password," password cannot be blank ");
+
+}
+
+else{
+setsuccessfor(password);
+}
+//////
+
+if (passwordValue2==='') {
+setErrorfor(password2," password2 cannot be blank ");
+
+}
+else if (passwordValue2!=passwordValue) {
+setErrorfor(password2," passwords does not match ");
+
+}
+else{
+setsuccessfor(password2);
+}	
+
+}
+
+function setErrorfor(input,message) {
+const formControl=input.parentElement;//.form-control
+const small=formControl.querySelector('small');
+small.innerText=message;		
+formControl.className='form-control error';
+
+	v=false;
+}
+function setsuccessfor(input){
+	const formControl=input.parentElement;//.form-control
+	formControl.className='form-control success';
+
+}
+return v;
+}
+
+</script>
+<style type="text/css">
+
+body{
+margin:0;
+padding:0;
+font-size:16px;
+font-family:sans-serif;
+color:#777;
+background-image:url(img1.png);
+background-size:cover;
+background-attachment:scroll;
+background-position:center;
+font-weight:300;
+min-height:100vh;
+}
+
+.box{
+position:relative;
+margin:10% auto;
+width:600px;
+background:rgba(0,0,0,0.4);
+text-shadow:0px 2px 4px rgba(0,0,0,0.8);
+}
+
+.left-box{
+width:300px;
+max-width:100%;
+border-radius:5px;
+overflow:hidden;
+box-sizing:border-box;
+text-shadow:0px 2px 4px rgba(0,0,0,0.8);
+}
+
+h1{
+margin:0;
+padding:20px 20px;
+font-size:28px;
+color:#fff;}
+.form{
+	padding:30px 40px;
+}
+
+.form-control{
+color:#fff;
+box-sizing:border-box;
+padding-bottom:20px;
+margin-bottom:10px;
+display:block;
+background:transparent;
+}
+
+.form-control  label{
+ display: inline-block;
+    margin-bottom:5px; 
+}
+.myp{
+	color:#ffe00e;
+}
+
+.form-control input{
+	border:2px solid #f0f0f0;
+	border-radius:4px;
+	display:block;
+	width:100%;
+	padding:7px;
+	font-size:14px;
+	font-family:inherit;
+	background:transparent;
+}
+
+.form-control.success input{
+	border-color:#2ecc71;
+}
+
+.form-control.error input{
+	border-color:#e74c3c;
+}
+
+.form-control i{
+position: absolute;
+margin-top:-26px;
+left:230px;
+visibility:hidden;
+}
+
+.form-control.success i.fa-check-circle{
+	visibility:visible;
+	color:#2ecc71;
+}
+
+.form-control.error i.fa-exclamation-circle{
+	visibility:visible;
+	color:#e74c3c;
+}
+
+.form-control.error small{
+	visibility:visible;
+	color:#e74c3c;
+}
+
+.form-control small{
+    visibility: hidden;
+    position:absolute;
+}
+
+
+.submit{
+width:120px;
+height:32px;
+margin-bottom:28px;
+cursor:pointer;
+background:#f44336;
+width:100%;
+transition:0.2s;
+text-transform:uppercase;
+border:none;
+border-radius:2px;
+color:#fff;
+}
+
+.submit:hover,
+.submit:focus{
+transition:0.2s;
+background:#ff5722;
+}
+.right-box{
+padding:40px;
+width:300px;
+min-height:80vh;
+right:30%;
+top:19.25%;
+box-sizing:border-box;
+position:absolute;
+background-image:url("imaga.jpg");
+background-size:cover;
+background-position:center;    
+}
+
+.right{
+font-size:28px;
+text-align:center;
+margin-bottom:40px;
+display:block;color:#fff;
+text-shadow:0px 2px 4px rgba("0,0,0,0.8");
+}
+.social{
+margin-bottom:20px;
+height:36px;
+width:220px;
+transition:0.2s;
+font-size:15px;
+color:#fff;
+border-radius:2px;
+border:none;
+cursor:pointer;
+}
+.f{
+    background-color:#32508e;
+}
+.t{
+    background-color:#55acee;
+}
+.g{
+    background-color:#dd4b39;
+}
+
+</style>
+</head>
+<body>
+
+<div class="box"> 
+<div class="left-box">
+<form class="form" id="form1" action="register1.html">
+<h1>Sign up</h1>
+
+<div class="form-control" >
+<label>User Name:</label><br>
+<input type="text" placeholder="Enter UserName" id="username1" >
+ <i class="fa fa-check-circle" aria-hidden="true"></i>
+<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+<small>Error massage</small><br>
+</div>
+
+<div class="form-control">
+<label>E-mail:</label><br>
+<input type="email" id="email"  placeholder="Enter e-mail">
+ <i class="fa fa-check-circle" aria-hidden="true"></i>
+<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+<small>Error massage</small><br>
+</div>
+
+<div class="form-control ">
+<label>Password:</label><br>
+<input type="password"  id="password" placeholder="Enter Password">
+ <i class="fa fa-check-circle" aria-hidden="true"></i>
+<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+<small>Error massage</small><br>
+</div>
+
+<div class="form-control">
+<label>password confirm:</label>
+<input type="password"  id="password2" placeholder="Enter Password confirm">
+ <i class="fa fa-check-circle" aria-hidden="true"></i>
+<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+<small>Error massage</small><br>
+</div>
+
+<input type="submit" class="Submit" id="Submit" onclick="return a()"> <br>
+</form>
+</div>
+</div>
+
+<div class="right-box">
+<span class="right">Sign up with<br>Social network</span>
+<button class="social f"> Sign up Facebook</button>
+<button class="social t">Sign up With Twitter</button>
+<button class="social g">Sign up With Google</button>
+    
+</div>
+</body>
+</html>

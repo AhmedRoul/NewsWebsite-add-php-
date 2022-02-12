@@ -1,0 +1,151 @@
+*
+{
+	margin:0;
+	padding:0;
+}
+
+h2
+{
+	position:absolute;
+	padding:10px;
+	margin-left:2%;
+	margin-top:10px;
+	float:right;
+	color:black;
+	font-family: 'Almarai', sans-serif;	
+}
+
+.lgout
+{
+	width:80px;
+	height:30px;
+	margin-bottom:10px;
+	font-family: 'Almarai', sans-serif;		
+}
+
+label
+{
+	text-color:white;
+}
+
+.colorlabel
+{
+	color:white;
+	padding:1px;
+	font-family: 'Almarai', sans-serif;	
+}
+
+.selectclas
+{
+	color:white;
+	padding:1px;
+font-family: 'Almarai', sans-serif;	
+margin-left:42px;
+}
+
+.addfile
+{
+	margin-bottom:1px;
+	margin-right:85px;	
+}
+
+.addlabel
+{
+	color:white;
+	padding:1px;
+font-family: 'Almarai', sans-serif;	
+margin-right:90px;
+
+}
+
+select
+{
+	margin-left:48.7%;
+	width:130px;
+	border-radius:3px;
+	margin-bottom:40px;
+}
+
+select:hover
+{
+	
+}
+
+textarea
+{
+	width:350px;
+	height:70px;
+	border:;
+	border-radius:7px;
+}
+
+.in
+{
+	width:180px;
+	height:30px;
+	border-radius:8px;
+    background-color:red; 
+    color:white;
+	margin-top:30px;
+    font-size:20px;
+}
+
+.in:hover
+{
+	background-color:firebrick;
+}
+li
+{
+	display:inline-block;	
+	padding:15px 30px;
+}
+ ul
+{
+	width:auto;
+	float:right;
+	margin-top:8px;	
+}
+
+.bdybackground{
+	background-image:url("https://wi.wallpapertip.com/wsimgs/66-666819_website-design-background-creative-background-image-for-website.jpg");
+	background-size:1550px 755px ;
+	background-attachment:fixed;
+	
+
+}
+
+form
+{
+	padding-bottom:15px;
+	margin-top:7.5%;
+	margin-left:36%;
+	margin-right:35%;
+	border: 3px solid red;
+	border-radius:5px;
+	background:rgba(0,0,0,0.6);
+	text-align:center;	
+}
+
+.text1
+{
+	margin-top:17px;	
+	text-align:center;
+	color:white;
+	font-size:30px;
+	font-family: 'Almarai', sans-serif;	
+}
+
+.txtbox
+{
+	width: auto;
+	height: auto;
+	border-radius:5px;
+}
+
+header
+{
+	height:60px;
+	width:100%;
+	background-color:crimson;
+	border-radius:3px;
+}

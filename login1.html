@@ -1,0 +1,260 @@
+<html>
+<head>
+<title>log in</title>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript">
+
+function doit(){
+var valid=true;
+const form=document.getElementById('form');
+const username=document.getElementById('username');
+const password=document.getElementById('password');
+checkInput();
+function checkInput(){
+const usernameValue=username.value.trim();
+const passwordValue=password.value.trim();
+if (usernameValue==='') {
+setErrorfor(username," Username cannot be blank ");
+}
+else{
+setsuccessfor(username);
+}
+/////
+
+//////
+
+if (passwordValue==='') {
+setErrorfor(password," password cannot be blank ");
+
+}
+else if (passwordValue<111111) {
+    //code
+				setErrorfor(password," password cannot be less than 6 ");
+}
+
+else{
+setsuccessfor(password);
+}
+}
+//////
+function setErrorfor(input,message) {
+const formControl=input.parentElement;//.form-control
+const small=formControl.querySelector('small');
+small.innerText=message;		
+formControl.className='form-control error';
+	valid=false;
+}
+function setsuccessfor(input){
+	const formControl=input.parentElement;//.form-control
+	formControl.className='form-control success';
+}
+return valid;
+}
+</script>
+
+<style type="text/css">
+body{
+margin:0;
+padding:0;
+font-size:16px;
+font-family:sans-serif;
+color:#777;
+background-image:url("nbnbnb.jpeg");
+background-size:cover;
+background-position:center;
+font-weight:300;
+min-height:100vh;
+background-attachment:scroll;
+}
+
+.box{
+position:relative;
+margin:10% auto;
+height:450px;
+width:600px;
+background:rgba(0,0,0,0.4);
+shadow:0px 2px 4px rgba(0,0,0,0.8);
+
+}
+
+.left-box{
+width:300px;
+height:400px;
+left:0px;
+top:0px;
+box-sizing:border-box;
+position:absolute;
+overflow:hidden;
+shadow:0px 2px 4px rgba(0,0,0,0.8);
+border-radius:5px;
+}
+
+h1{
+margin-left:20px;
+font-size:28px;
+color:#fff;}
+
+.form{
+padding:15px 20px;
+}
+
+.form-control{
+color:#fff;
+box-sizing:border-box;
+padding-bottom:20px;
+margin-bottom:10px;
+display:block;
+background:transparent;
+}
+
+.form-control  label{
+ display: inline-block;
+    margin-bottom:5px; 
+}
+
+.form-control input{
+	border:2px solid #f0f0f0;
+	border-radius:4px;
+	display:block;
+	width:100%;
+	padding:7px;
+	font-size:14px;
+	font-family:inherit;
+	background:transparent;
+}
+
+.form-control.success input{
+	border-color:#2ecc71;
+}
+
+.form-control.error input{
+	border-color:#e74c3c;
+}
+
+.form-control i{
+position: absolute;
+margin-top:-26px;
+left:250px;
+visibility:hidden;
+}
+
+.form-control.success i.fa-check-circle{
+	visibility:visible;
+	color:#2ecc71;
+}
+
+.form-control.error i.fa-exclamation-circle{
+	visibility:visible;
+	color:#e74c3c;
+}
+
+.form-control.error small{
+	visibility:visible;
+	color:#e74c3c;
+}
+
+.form-control small{
+visibility: hidden;
+position:absolute;
+}
+
+
+.submit{
+width:120px;
+height:32px;
+margin-bottom:28px;
+cursor:pointer;
+background:#f44336;
+width:100%;
+transition:0.2s;
+text-transform:uppercase;
+border:none;
+border-radius:2px;
+color:#fff;
+}
+
+.submit:hover,
+.submit:focus{
+transition:0.2s;
+background:#ff5722;
+}
+
+.right-box{
+padding:40px;
+width:300px;
+height:450px;
+right:30%;
+top:19.2%;
+box-sizing:border-box;
+position:absolute;
+
+background-image:url("wp4963545-abstract-teal-color-wallpapers.jpg");
+background-size:cover;
+background-position:center;
+    
+}
+.right{
+font-size:28px;
+text-align:center;
+margin-bottom:40px;
+display:block;color:#fff;
+text-shadow:0px 2px 4px rgba("0,0,0,0.8");
+}
+.social{
+margin-bottom:20px;
+height:36px;
+width:220px;
+transition:0.2s;
+font-size:15px;
+color:#fff;
+border-radius:2px;
+border:none;
+cursor:pointer;
+}
+.f{
+    background-color:#32508e;
+}
+.t{
+    background-color:#55acee;
+}
+.g{
+    background-color:#dd4b39;
+}
+</style>
+</head>
+<body>
+<div class="box"> 
+<div class="left-box">
+<h1>Login here</h1>
+<form action="Home(logout).html" id="form" class="form">
+<div class="form-control" >
+<label>User Name:</label><br>
+<input type="text" placeholder="Enter UserName" id="username" >
+ <i class="fa fa-check-circle" aria-hidden="true"></i>
+<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+<small>Error massage</small><br>
+</div>
+
+<div class="form-control">
+<label>Password:</label><br>
+<input type="password"  id="password" placeholder="Enter Password">
+ <i class="fa fa-check-circle" aria-hidden="true"></i>
+<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+<small>Error massage</small><br>
+</div>
+
+<input type="submit"id="submit" class="submit" onclick="return doit()"><br>
+<a href="register2.html" >Forgetten passord?</a><br>
+<a href="register2.html" >Dont have an account?</a>
+</form>
+</div>
+</div>
+<div class="right-box">
+    <span class="right">Sign up with<br>Social network</span>
+    <button class="social f">Log In With Facebook</button>
+    <button class="social t">Log In With Twitter</button>
+    <button class="social g">Log In With Google</button>
+    
+</div>
+</body>
+</html>
